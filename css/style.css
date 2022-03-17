@@ -87,9 +87,9 @@ section {
 }
 
 section h1 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     padding: 0;
-    line-height: 1.2;
+    line-height: 1.1;
     letter-spacing: 0.3em;
     font-weight: 600;
     text-transform: uppercase;
@@ -104,18 +104,20 @@ section p {
     padding: 1em 0 2em;
     color: var(--light-red);
     letter-spacing: 0.04em;
-    line-height: 1.5em;
+    line-height: 1.4em;
     font-size: 0.85rem;
     font-weight: 400;
 }
 
+/* FORM */
 form {
     position: relative;
 }
 
-form label input {
+#mail {
     border-radius: 2em;
-    padding: 0.9em 3.5em 0.9em 1.5em;
+    padding: 10px 80px 10px 20px;
+    margin-bottom: 0.8em;
     border: 1px solid rgb(216, 208, 208);
 }
 
@@ -130,20 +132,38 @@ input:focus {
     outline-style: none;
 }
 
-#button {
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
-        rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-    border-radius: 2em;
-    background-color: var(--light-red);
-    padding: 0.9em 1.5em;
+#error-arrow {
+    display: none;
     position: absolute;
-    right: 15px;
+    right: 80px;
+    top: 6px;
+}
+
+#button {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+        rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+        rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 2em;
+    background-color: var(--bright-red);
+    padding: 10px 20px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+#error-paragraph {
+    visibility: hidden;
+    color: red;
+    padding: 0;
 }
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 1440px) {
     /* MAIN CONTAINER */
     main {
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-position: 60vw center;
+        background-size: 60% 100%;
         display: grid;
         grid-template-columns: 60vw 40vw;
         grid-template-areas:
@@ -189,7 +209,7 @@ input:focus {
     section h1 {
         font-size: 3.5rem;
         padding: 0;
-        line-height: 1.2;
+        line-height: 1;
         letter-spacing: 0.3em;
         font-weight: 600;
         text-transform: uppercase;
@@ -201,7 +221,7 @@ input:focus {
     }
 
     section p {
-        padding: 2em 0;
+        padding: 3em 0;
         color: var(--light-red);
         letter-spacing: 0.04em;
         line-height: 1.8em;
@@ -213,10 +233,14 @@ input:focus {
         position: relative;
     }
 
-    form label input {
+    #mail {
         border-radius: 2em;
-        padding: 0.9em 10.5em 0.9em 1.5em;
+        padding: 15px 200px 15px 20px;
         border: 1px solid rgb(216, 208, 208);
+    }
+
+    #error-paragraph {
+        padding-left: 20px;
     }
 
     input::placeholder {
@@ -226,18 +250,17 @@ input:focus {
         letter-spacing: 0.03em;
     }
 
-    input:focus {
-        outline-style: none;
+    #error-arrow {
+        right: 140px;
+        top: 12px;
     }
 
     #button {
-        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
-            rgba(17, 17, 26, 0.1) 0px 16px 56px,
-            rgba(17, 17, 26, 0.1) 0px 24px 80px;
-        border-radius: 2em;
-        background-color: var(--light-red);
-        padding: 0.9em 2.5em;
-        position: absolute;
+        padding: 16px 40px;
         right: 30px;
+    }
+
+    #button:active {
+        background-color: var(--light-red);
     }
 }
