@@ -149,6 +149,7 @@ input:focus {
 #error-paragraph {
     visibility: hidden;
     color: red;
+    padding: 0;
 }
 
 /* MEDIA QUERIES */
