@@ -50,7 +50,6 @@ img {
 /* MAIN CONTAINER */
 main {
     min-height: 100vh;
-    width: 100vw;
 }
 
 /* MAIN HEADER */
@@ -60,20 +59,24 @@ header {
 
 header img {
     height: 20px;
-    width: 100px;
+    max-width: 100%;
 }
 
 /* MAIN HERO IMAGE */
 figure {
     height: 250px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 figure div {
     height: 100%;
+    max-width: 100%;
     background-image: url(../images/hero-mobile.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center center;
 }
 
 /* MAIN TEXT */
@@ -106,14 +109,17 @@ section p {
 
 /* FORM */
 form {
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 311px;
     padding: 1em 0;
+    position: relative;
 }
 
 #mail {
     border: 1px solid var(--light-red);
     border-radius: 2em;
     padding: .75em 5em .75em 1em;
-    position: relative;
 }
 
 input::placeholder {
@@ -130,8 +136,8 @@ input:focus {
 #error-arrow {
     display: none;
     position: absolute;
-    left: 15em;
-    bottom: 4.9em;
+    right: 4.5em;
+    bottom: 1.7em;
 }
 
 #button {
@@ -143,7 +149,13 @@ input:focus {
     cursor: pointer;
     padding: .75em 1.5em;
     position: absolute;
-    right: 3em;
+    right: 0;
+}
+
+@media screen and (max-width: 326px) {
+    main {
+        display: inline-block;
+    }
 }
 
 #error-paragraph {
@@ -219,6 +231,7 @@ input:focus {
     /* FORM */
     form {
         padding: 1em 0;
+        max-width: 447px;
     }
 
     #mail {
@@ -231,18 +244,22 @@ input:focus {
     }
 
     #error-arrow {
-        left: 32.5em;
-        bottom: 10.8em;
+        right: 6.7em;
+        bottom: 2em;
     }
 
     #button {
         padding: 1em 2.5em;
-        left: 35em;
     }
 
     #error-paragraph {
         visibility: hidden;
         color: red;
         padding: 0 0 0 2em;
+    }
+
+    .p-container {
+        max-width: 447px;
+        margin: 0 auto;
     }
 }
