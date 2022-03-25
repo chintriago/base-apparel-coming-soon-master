@@ -7,6 +7,7 @@ $("#emailForm").submit(function (event) {
         $("#error-paragraph").css("visibility", "hidden");
         $("#error-arrow").css("display", "none");
         console.log(email);
+        alert(email + " has been added to our mailing list!");
     } else {
         $("#mail").css("border", "1px solid red");
         $("#error-paragraph").css("visibility", "visible");
