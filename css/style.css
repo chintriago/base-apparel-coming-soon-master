@@ -55,6 +55,8 @@ main {
 /* MAIN HEADER */
 header {
     padding: 1.5em 0 1.5em 2em;
+    max-width: 768px;
+    margin: 0 auto;
 }
 
 header img {
@@ -99,17 +101,18 @@ section h1 span {
 }
 
 section p {
+    max-width: 768px;
     color: var(--light-red);
     font-size: 0.85rem;
     font-weight: 400;
     letter-spacing: 0.02em;
     line-height: 1.6em;
     padding: 2em 0;
+    margin: 0 auto;
 }
 
 /* FORM */
 form {
-    display: inline-block;
     margin: 0 auto;
     max-width: 311px;
     padding: 1em 0;
@@ -187,7 +190,8 @@ input:focus {
         justify-self: center;
         align-self: center;
         padding: 0;
-        width: 50%;
+        margin: 0;
+        min-width: 50%;
     }
 
     header img {
@@ -226,12 +230,15 @@ input:focus {
     section p {
         font-size: 0.95rem;
         padding: 2em 0;
+        margin: 0;
+        max-width: 100%;
     }
 
     /* FORM */
     form {
         padding: 1em 0;
         max-width: 447px;
+        margin: 0 auto 0 0
     }
 
     #mail {
@@ -260,6 +267,6 @@ input:focus {
 
     .p-container {
         max-width: 447px;
-        margin: 0 auto;
+        margin: 0 auto 0 0;
     }
 }
